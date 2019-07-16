@@ -225,13 +225,13 @@ while (parar == 's'):
             
             if p == 0:
             
-                y = int(raw_input("a donde deswa mover el caballo "))
+                y = int(raw_input("a donde desea mover el caballo "))
                 x = int(raw_input("                               "))
                 caballo0.mover(y,x,tablero)
                 tablero.mostrar()
             else:
             
-                y = int(raw_input("a donde deswa mover el caballo "))
+                y = int(raw_input("a donde desea mover el caballo "))
                 x = int(raw_input("                               "))
                 caballo1.mover(y,x,tablero)
                 tablero.mostrar()
@@ -244,13 +244,13 @@ while (parar == 's'):
             
                 if p == 0:
             
-                    y = int(raw_input("a donde deswa mover el Alfil "))
+                    y = int(raw_input("a donde desea mover el Alfil "))
                     x = int(raw_input("                               "))
                     alfil0.mover(y,x,tablero)
                     tablero.mostrar()
                 else:
             
-                    y = int(raw_input("a donde deswa mover el Alfil "))
+                    y = int(raw_input("a donde desea mover el Alfil "))
                     x = int(raw_input("                               "))
                     alfil1.mover(y,x,tablero)
                     tablero.mostrar()
