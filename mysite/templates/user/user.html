@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8"
+	<title>Creación de Usuario</title>
+</head>
+<body>
+
+
+
+<form method= "POST">
+	
+	{% csrf_token %} 
+	
+	{{User_Form.as_p}}
+
+	<button type="submit">Aceptar</button>
+
+</form>
+
+
+</body>
+</html>
