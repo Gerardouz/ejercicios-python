@@ -9,3 +9,5 @@ class UserForm(forms.ModelForm):
 
 		model = User
 		fields = ['nombre', 'apellido', 'cedula']
+
+		

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>{% block titulo %}Pagina Inicio{% endblock titulo%}</title>
+</head>
+{% block css %}
+
+{% endblock css %}
+
+<body>
+{% block body %}
+
+<h1> Esta es la página de inicio del proyecto</h1>
+
+<a href="{%url 'user:user'%}"><button>Crear Nuevo Registro</button></a>
+<a href="{%url 'user:consult_user'%}"><button>Consultar Registros</button></a>
+
+{% endblock body%}
+
+
+
+{% block js %}
+
+
+{% endblock js %}
+</body>
+
+
+
+</html>

@@ -1,23 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset = "UTF-8"
-	<title>Creación de Usuario</title>
-</head>
-<body>
+{%extends 'index.html'%}
+
+
+{%block titulo%}
+
+	Creación de Usuario
+
+{%endblock titulo%}
+
+{%block body%}
+
+	<form method= "POST">
+		
+		{% csrf_token %} 
+		
+		{%if error%}
+			<h2>El Campo a Modificar no Existe</h2>
+		{%else%}
+
+			{{User_Form.as_p}}
+			<button type="submit">Aceptar</button>
+			<a href="{%url 'index'%}"><button>Cancelar</button>
+
+		{%endif%}
+
+		
+
+	</form>
+
+{%endblock body%}
 
 
 
-<form method= "POST">
-	
-	{% csrf_token %} 
-	
-	{{User_Form.as_p}}
-
-	<button type="submit">Aceptar</button>
-
-</form>
-
-
-</body>
-</html>

@@ -1,0 +1,66 @@
+{%extends 'index.html'%}
+
+{%block titulo%}
+	Consultar Usuarios
+{%endblock titulo%}
+
+{%block body%}
+
+	{%if Users%}
+
+		<table>
+			
+			<thead>
+			
+				<tr>
+					<th>#</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Cédula</th>
+					<th>Acción</th>
+					
+
+				</tr>
+
+			</thead>
+
+			<tbody>
+				
+				<tr>
+					{%for user in Users%}
+
+						<tr>
+							<td>{{user.id}}</td>
+							<td>{{user.nombre}}</td>
+							<td>{{user.apellido}}</td>
+							<td>{{user.cedula}}</td>
+							<td><a href="{% url 'user:edit_user' user.id %}"><button>Editar</button></a>
+								<a href="{% url 'user:elim_user' user.id%}"><button>Eliminar</button></a>
+							</td>
+
+							
+
+						</tr>
+
+
+
+					{%endfor%}
+
+
+
+				</tr>
+			</tbody>
+
+		</table>
+
+
+	{%else%}
+
+
+		<h1>No se encuentran Usuarios registrados</h1>
+
+		<a href="{%url 'index'%}"><button>Regresar a la página principal</button>
+
+	{%endif%}
+
+{%endblock body%}
